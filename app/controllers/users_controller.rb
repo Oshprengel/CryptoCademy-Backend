@@ -42,4 +42,32 @@ class UsersController < ApplicationController
     end
     return false
   end
+
+ ####################### LOGIN CHECK ############################
+
+  def loginCheck
+    #if username exist render the login user info
+    if checkForUser(params)
+        render json: checkForUser(params)
+    #if username doesnt exist or match 
+    else
+      render json: {"error":"Username/Password does not match or exist!"}
+    end
+  end
+
+
+    #checks to see if user exists in database
+    def checkForUser(loginUser)
+      @users = User.all
+
+      @users.each do |user|
+        if user["userName"] == loginUser["userName"] && user["password"] == loginUser["password"]
+          return user
+        end
+      end
+      return false
+
+    end
+ ###################################################################
+
 end
