@@ -10,7 +10,6 @@ User.create(
     userName:"oleg",
     password:"pass",
     portfolio: {
-        totalBalance: 5000,
         USD: 5000,
         assets: { 
             BTC: 0,
