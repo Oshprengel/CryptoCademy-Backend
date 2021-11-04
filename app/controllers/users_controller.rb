@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def createUserAttempt
     @body = request.body
     puts @body
-    render json: @body
+    render json: @bod
+#HERE A SMALL CHANGE
   end
 end
