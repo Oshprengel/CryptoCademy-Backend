@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
 
     #checks to see if user already exists
-    def checkUser(userName)
+  def checkUser(userName)
     @users = User.all
     @users.each do |user|
       if user["userName"] == userName
