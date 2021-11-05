@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post '/user/createuser', to: 'users#createUserAttempt'
 
   post '/user/login' , to: 'users#loginCheck'
+
+  get '/', to: 'users#home'
 end
