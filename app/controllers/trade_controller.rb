@@ -1,11 +1,17 @@
 class TradeController < ApplicationController
     ####################### TRADE ROUTE /trade/maketrade ############################ 
     <<-DOC
-        trade requests are send in the following json format where the 
+        trade requests are send in the following json format
         {
-            "userName" : "Some username",
-            "transaction": "{exchange: {USD: 4000}, for: {ETH:1}}"
-        } 
+            "userName" : "someUserName",
+            "password" : "somePassword",
+            "transaction": {
+                #the first value of theses arrays represent the coin which you wish to trade and the second value should represent the amount
+                in this example you are trading 3000 usd for 1 doge
+                "exchange": ["USD" , 3000],
+                "for":["DOGE", 1]
+            }
+        }
     DOC
     def makeTrade
       #the coin to trade and the amount of it trade
