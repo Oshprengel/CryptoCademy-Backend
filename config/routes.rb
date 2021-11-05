@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # Almost every application defines a route for the root path ("/") at the top of this file.
   # root "articles#index"
-  post '/user/createuser', to: 'users#createUserAttempt'
+  post '/user/create', to: 'users#createUserAttempt'
 
   post '/user/login' , to: 'users#loginCheck'
 

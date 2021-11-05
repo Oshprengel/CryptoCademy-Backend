@@ -12,15 +12,13 @@ class UsersController < ApplicationController
         userName:params["userName"],
         password:params["password"],
         portfolio: {
-          USD: 5000,
-          assets: { 
+              USD: 5000, 
               BTC: 0,
               ETH: 0,
               DOGE:  0,
               ADA: 0,
               DOT: 0,
             }
-          }
         )
       #if user is created then render a json object with that users info
       if @newUser.save
