@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-  def home
-    render html: "Welcome Home"
-  end
   
+ ####################### CREATE USER /users/create############################ 
+
   def createUserAttempt
     #if username is not already taken
     if !checkUser params["userName"]
@@ -45,7 +44,9 @@ class UsersController < ApplicationController
     return false
   end
 
- ####################### LOGIN CHECK ############################
+ ##############################################################################
+
+ ####################### LOGIN CHECK /users/login ############################
 
   def loginCheck
     #if username exist render the login user info
@@ -70,6 +71,6 @@ class UsersController < ApplicationController
       return false
 
     end
- ###################################################################
+ ##############################################################################
 
 end

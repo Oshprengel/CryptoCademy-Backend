@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   post '/user/login' , to: 'users#loginCheck'
 
-  get '/', to: 'users#home'
+  get '/', to: 'home#home'
 end
