@@ -7,7 +7,7 @@ class TradeController < ApplicationController
             "password" : "somePassword",
             "transaction": {
                 #the first value of theses arrays represent the coin which you wish to trade and the second value should represent the amount
-                in this example you are trading 3000 usd for 1 doge
+                in this example you are trading 3000 usd for 1 doge`
                 "exchange": ["USD" , 3000],
                 "for":["DOGE", 1]
             }
