@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post '/user/create', to: 'users#createUserAttempt'
 
   #login user route
-  post '/user/login' , to: 'users#loginCheck'
+  get '/user/login' , to: 'users#loginCheck'
 
   #home page
   get '/', to: 'home#home'
