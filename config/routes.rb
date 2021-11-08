@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   #to make trades
   post '/trade', to: 'trade#makeTrade'
+
+  # to delete user
+  delete '/user/:id', to: 'users#destroyUser'
 end
