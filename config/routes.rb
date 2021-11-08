@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #create new user route
+  post '/user/create', to: 'users#createUserAttempt'
 
-  # Almost every application defines a route for the root path ("/") at the top of this file.
-  # root "articles#index"
-  post '/createuser', to: 'users#createUserAttempt'
+  #login user route
+  post '/user/login' , to: 'users#loginCheck'
+
+  #home page
+  get '/', to: 'home#home'
+
+  #to make trades
+  post '/trade', to: 'trade#makeTrade'
 end
