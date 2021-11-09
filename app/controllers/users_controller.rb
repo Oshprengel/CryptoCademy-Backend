@@ -11,7 +11,8 @@ class UsersController < ApplicationController
         userName:params["userName"],
         password:params["password"],
         portfolio: {
-              USD: 5000, 
+              USD: 5000,
+              WatchList: [], 
               BTC: 0,
               ETH: 0,
               DOGE:  0,
@@ -72,5 +73,13 @@ class UsersController < ApplicationController
 
     end
  ##############################################################################
+
+ ####################### DELETE USER /users/DELETE ############################
+
+ def destroyUser
+  @user = User.find(params[:id])
+  @user.destroy
+  render json: loginCheck
+ end
 
 end
