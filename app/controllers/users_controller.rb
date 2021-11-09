@@ -55,7 +55,7 @@ class UsersController < ApplicationController
         render json: checkForUser(params)
     #if username doesnt exist or match 
     else
-      render json: {"error":"Username/Password does not match or exist!"}
+      render json: {"error":"Username/Password invalid!"}
     end
   end
 
